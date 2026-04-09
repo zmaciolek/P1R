@@ -1,14 +1,17 @@
 import sys
 
-lista=sys.argv[1:]
+lista1=sys.argv[1:]
 
 def bubble(lista):
-	n = len(lista)
-	for i in range(n):
-		for j in range(0,n-i-1):
-			if lista[j] > lista [j+1]:
-				lista[j], lista[j+1] = lista[j+1], lista[j]
-	print(lista)
-	return lista
+   
+    for i in range(len(lista)-1):
+        for j in range(len(lista)-1):
+            if lista[j] > lista[j+1]:
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+    return lista
 
-print(bubble(bubble(lista)))
+
+a = [5, 7, 8, 6 , 2, 2.444, 2.11]
+print(a)
+print(bubble(a))
+print(bubble(lista1))
